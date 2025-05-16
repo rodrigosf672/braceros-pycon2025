@@ -1,4 +1,8 @@
-# Braceros-PyCon2025
+# Honrando las Narrativas de Braceros
+## Un Enfoque Pythonico para Minería de Textos de Historias de Trabajo Arduo, Migración y Resiliencia
+### PyCon US 2025 (Charla): https://us.pycon.org/2025/schedule/presentation/15/
+
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/fe75fbfb-1f64-4302-8f49-fbfd76c35c39" />
 
 This project explores and visualizes oral histories from the Bracero Program using Python. It includes:
 
