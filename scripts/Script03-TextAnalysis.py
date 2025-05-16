@@ -12,7 +12,7 @@ from nltk.corpus import stopwords
 nltk.download("stopwords")
 stop_words = set(stopwords.words("english") + stopwords.words("spanish"))
 
-# Step 1: Load your data
+# Step 1: Load data
 df = pd.read_csv("data/bracero_archive_interviews.csv")
 
 # Step 2: Preprocess text
