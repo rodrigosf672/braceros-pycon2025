@@ -1,0 +1,45 @@
+import requests
+
+def check_exists(item_id):
+    url = f"https://braceroarchive.org/items/show/{item_id}"
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    try:
+        r = requests.get(url, headers=headers, timeout=5)
+        return r.status_code == 200
+    except requests.RequestException:
+        return False
+
+# Step 1: Exponential Search to find an upper bound
+start = 3
+item_id = start
+
+while check_exists(item_id):
+    item_id *= 2
+
+low = item_id // 2
+high = item_id
+last_valid = low
+
+# Step 2: Binary Search within the [low, high] range
+while low <= high:
+    mid = (low + high) // 2
+    if check_exists(mid):
+        last_valid = mid
+        low = mid + 1
+    else:
+        high = mid - 1
+
+# Step 3: Post-Binary Linear Scan to catch late scattered valid items
+buffer = 100 
+failures = 0
+item_id = last_valid + 1
+
+while failures < buffer:
+    if check_exists(item_id):
+        last_valid = item_id
+        failures = 0
+    else:
+        failures += 1
+    item_id += 1
+
+print(f"Highest valid item number is: {last_valid}")
