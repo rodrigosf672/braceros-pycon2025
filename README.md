@@ -18,6 +18,7 @@ This project explores and visualizes oral histories from the Bracero Program usi
 ├── data/ # Input CSVs including quotes and topic data
 ├── output/ # Static HTML visualizations (viewable in browser)
 ├── scripts/ # Python scripts for scraping, processing, and Shiny apps
+├── .gitattributes
 ├── .gitignore
 ├── LICENSE
 ├── README.md
