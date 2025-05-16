@@ -1,7 +1,7 @@
 import pandas as pd
 import re
 
-# Load your interview file
+# Load interview file
 df = pd.read_csv("data/bracero_archive_interviews.csv")
 
 # Define the 20 topic categories and keywords
