@@ -9,15 +9,16 @@ This project explores and visualizes oral histories from the Bracero Program usi
 
 ---
 
-## Project Structure
-braceros-pycon2025/
+## Project Structure 
+``` braceros-pycon2025/ 
 ├── data/ # Input CSVs including quotes and topic data
 ├── output/ # Static HTML visualizations (viewable in browser)
-├── scripts/
-├── .gitignore 
+├── scripts/ # Python scripts for scraping, processing, and Shiny apps
+├── .gitignore
 ├── LICENSE
-├── README.md 
+├── README.md
 └── requirements.txt
+```
 
 ## Run the Quote Browser App
 
