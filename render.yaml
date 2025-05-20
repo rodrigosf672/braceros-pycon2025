@@ -1,6 +1,0 @@
-services:
-  - type: web
-    name: braceros-shiny-app
-    env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: shiny run shiny/app.py --host 0.0.0.0 --port $PORT
